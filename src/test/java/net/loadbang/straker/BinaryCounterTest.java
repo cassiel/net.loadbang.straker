@@ -23,7 +23,7 @@ public class BinaryCounterTest {
 		for (int i = 0; i < 8; i++) {
 			assertEquals("value " + n + " counter bit " + i,
 						 ((n >> i) & 1) != 0,
-						 counter.getRenderedLamp(0, i)
+						 Math.abs(counter.getRenderedLamp(0, i)) > 0.001
 						);
 		}
 	}
